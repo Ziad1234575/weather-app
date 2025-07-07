@@ -1,0 +1,223 @@
+/* أنماط عامة */
+body {
+  background: linear-gradient(135deg, #169df1, #0b5ed7);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background-attachment: fixed;
+}
+
+/* التكيف مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+}
+
+/* العنصر الرئيسي */
+.App {
+  max-width: 800px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 768px) {
+  .App {
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 15px;
+  }
+}
+
+/* حقل البحث */
+.input-group-custom {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+@media (max-width: 480px) {
+  .input-group-custom {
+    margin: 15px auto;
+  }
+}
+
+.input-group-custom input {
+  width: 100%;
+  padding: 12px 110px 12px 15px;
+  border-radius: 50px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .input-group-custom input {
+    padding: 10px 90px 10px 15px;
+    font-size: 14px;
+  }
+}
+
+.input-group-custom button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 50px;
+  border: none;
+  background: white;
+  color: #169df1;
+  padding: 0 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .input-group-custom button {
+    padding: 0 15px;
+    font-size: 14px;
+  }
+  .App {
+    margin : 0 auto;
+  }
+}
+
+/* معلومات الطقس */
+.weather-info {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.city-name {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .city-name {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .city-name {
+    font-size: 1.5rem;
+  }
+}
+
+.weather-description {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+@media (max-width: 480px) {
+  .weather-description {
+    font-size: 1rem;
+  }
+}
+
+.local-time {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.weather-icon {
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  margin: 10px 0;
+}
+
+@media (max-width: 480px) {
+  .weather-icon {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.temperature {
+  font-size: 4rem;
+  font-weight: 300;
+  margin: 10px 0;
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .temperature {
+    font-size: 3.5rem;
+  }
+}
+
+.temperature-unit {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10px;
+}
+
+/* المعلومات الإضافية */
+.additional-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 25px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+@media (max-width: 600px) {
+  .additional-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 360px) {
+  .additional-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-item {
+  text-align: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.info-value {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* رسائل الخطأ */
+.error {
+  color: #ff6b6b;
+  text-align: center;
+  margin: 15px 0;
+  font-weight: 500;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
