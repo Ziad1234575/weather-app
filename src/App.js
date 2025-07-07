@@ -17,7 +17,7 @@ export default function App() {
     setLoading(true);
     try {
       const response = await axios.get(
-        `http://api.weatherapi.com/v1/current.json?key=4090c8f261ca43e9ba8101314250707&q=${city}&aqi=no`
+        `https://api.weatherapi.com/v1/current.json?key=4090c8f261ca43e9ba8101314250707&q=${city}&aqi=no`
       );
       setWeather(response.data);
       setError(null);
